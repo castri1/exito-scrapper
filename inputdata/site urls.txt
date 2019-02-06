@@ -1,0 +1,36 @@
+jumbo
+Despensa,https://www.tiendasjumbo.co/supermercado/despensa?PS=20
+Pescados y Mariscos,https://www.tiendasjumbo.co/supermercado/pescados-y-mariscos?PS=20
+Frutas y Verduras,https://www.tiendasjumbo.co/supermercado/frutas-y-verduras?PS=20
+Carne y pollo,https://www.tiendasjumbo.co/supermercado/carne-y-pollo?PS=20
+Bebidas,https://www.tiendasjumbo.co/supermercado/bebidas?PS=20
+Panader�a y Pasteler�a,https://www.tiendasjumbo.co/supermercado/panaderia-y-pasteleria?PS=20
+Charcuter�a,https://www.tiendasjumbo.co/supermercado/charcuteria?PS=20
+Vinos y Licores,https://www.tiendasjumbo.co/supermercado/vinos-y-licores?PS=20
+Aseo de hogar,https://www.tiendasjumbo.co/supermercado/aseo-de-hogar?PS=20
+Cuidado Personal,https://www.tiendasjumbo.co/supermercado/cuidado-personal?PS=20
+Dulces y postres,https://www.tiendasjumbo.co/supermercado/dulces-y-postres?PS=20
+Platos Preparados,https://www.tiendasjumbo.co/supermercado/platos-preparados?PS=20
+Productos Congelados,https://www.tiendasjumbo.co/supermercado/productos-congelados?PS=20
+Cigarrillos y Tabacos,https://www.tiendasjumbo.co/supermercado/cigarrillos-y-tabacos?PS=20
+Cuidado del beb�s,https://www.tiendasjumbo.co/supermercado/cuidado-del-bebe?PS=20
+Belleza,https://www.tiendasjumbo.co/supermercado/belleza?PS=20
+
+
+
+
+exito
+"Pollo, carne y pescado",	https://www.exito.com/Mercado-Frescos-Pollo-_carne_y_pescado/_/N-2bbb
+Frutas y verduras,	https://www.exito.com/Mercado-Frescos-Frutas_y_verduras/_/N-2bb3
+Despensa,	https://www.exito.com/Mercado-Alimentos_y_bebidas-Despensa/_/N-2amt
+Snacks,	https://www.exito.com/Mercado-Alimentos_y_bebidas-Galleteria-_confiteria_y_pasabocas/_/N-2ar6
+Bebidas,	https://www.exito.com/Mercado-Alimentos_y_bebidas-Bebidas/_/N-2apq
+Congelados y refrigerados,	https://www.exito.com/Mercado-Congelados_y_refrigerados/_/N-2at2
+Mundo vinos,	https://www.exito.com/Mercado-Mundo_vinos/_/N-2d9g
+Licores,	https://www.exito.com/Mercado-Vinos_y_licores/_/N-2aky
+Delicatessen,	https://www.exito.com/Mercado-Alimentos_y_bebidas-Delicatessen/_/N-2aqd
+Panadería y repostería,	https://www.exito.com/Mercado-Alimentos_y_bebidas-Panaderia_y_reposteria/_/N-2aqr
+Saludables,	https://www.exito.com/Mercado-Alimentos_saludables/_/N-2e2g
+Importados,	https://www.exito.com/Mercado-Alimentos_y_bebidas-Despensa-Mundo_importados/_/N-2ang
+Aseo del hogar,	https://www.exito.com/Mercado-Aseo_del_hogar/_/N-2avk
+Mascotas,	https://www.exito.com/Mercado-Mascotas/_/N-2als
