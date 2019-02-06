@@ -1,0 +1,29 @@
+{
+  "name": "webscrapo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Castrillon",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "colors": "^1.3.3",
+    "commander": "^2.19.0",
+    "csvtojson": "^2.0.8",
+    "jsonframe-cheerio": "^3.0.1",
+    "puppeteer": "^1.11.0",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "@types/colors": "^1.2.1",
+    "@types/csvtojson": "^1.1.5",
+    "@types/node": "^10.12.18",
+    "@types/puppeteer": "^1.11.1",
+    "typescript": "^3.2.2"
+  }
+}
