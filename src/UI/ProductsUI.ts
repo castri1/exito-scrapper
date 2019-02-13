@@ -1,18 +1,25 @@
-import IProduct from "../Models/IProduct";
 import AbstractProductPage from "../Shared/AbstractProductPage";
 import { Browser, Page } from "puppeteer";
+import { IProductData } from '../Models/IProductData'
 
 export default abstract class ProductsUI {
   constructor(protected productsPage: AbstractProductPage,
     protected browser: Browser,
     protected page: Page) { }
 
-  public async getProductsData(): Promise<IProduct[]> {
+  public async getProductsData(): Promise<IProductData[]> {
     try {
+      const categoryBox = await this.productsPage.getCategoryLevels();
       const products = await this.productsPage.getProductList();
       const productsPromises = products.map((p, i) => p.getProductData());
       const productData = await Promise.all(productsPromises);
-      return productData;
+      return productData.map(prod => {
+        const prodResults: IProductData = {
+            ...prod,
+            ...categoryBox
+        }
+        return prodResults;
+      });
     } catch (error) {
       console.log("Error reading products data");
     }

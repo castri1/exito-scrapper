@@ -30,8 +30,8 @@ export default class ExitoProductsUI extends ProductsUI {
 
   static async navigate(browser: Browser, url: string, delay?: number): Promise<ProductsUI> {
     const page = await this.startPage(browser, url, delay);
-    await this.setLocation(page);
-    delay = delay ? delay : 100;
+    //The exito page was modified. we dont need to following line any more
+    //await this.setLocation(page);
     const productsPageInstance = new ExitoProductsPage(browser, page);
     return new ExitoProductsUI(productsPageInstance, browser, page);
   }

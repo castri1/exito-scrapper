@@ -1,9 +1,7 @@
-import IProduct from "../Models/IProduct";
-import puppeteer, { LaunchOptions, Browser } from "puppeteer";
-import ExitoProductsPage from "../ProductPage/ExitoProductsPage";
+import { LaunchOptions, Browser } from "puppeteer";
 import AbstractScraper from "./AbstractScraper";
-import ProductsUI from "../UI/ProductsUI";
 import ExitoProductsUI from "../UI/ExitoProductsUI";
+import { IProductData } from "../Models/IProductData";
 
 
 export default class ExitoScraper extends AbstractScraper {
@@ -11,10 +9,10 @@ export default class ExitoScraper extends AbstractScraper {
     super(url, options);
   }
 
-  protected async executeScrapingLogic(): Promise<IProduct[]> {
+  protected async executeScrapingLogic(): Promise<IProductData[]> {
     try {
       let counter = 1;
-      const products: IProduct[] = await this.ui.getProductsData();
+      const products: IProductData[] = await this.ui.getProductsData();
       console.log(`Page ${counter}`.underline.yellow);
       let [previous, next] = await this.ui.nextPage();
       while (previous !== next) {
@@ -31,7 +29,7 @@ export default class ExitoScraper extends AbstractScraper {
     }
   }
 
-  public async scrape(): Promise<IProduct[]> {
+  public async scrape(): Promise<IProductData[]> {
     await this.initialize((browser: Browser) => ExitoProductsUI.navigate(browser, this.url, 2000));
     const products = await this.executeScrapingLogic();
     await this.end();

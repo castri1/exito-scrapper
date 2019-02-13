@@ -1,9 +1,7 @@
 import colors from 'colors';
 import puppeteer, { LaunchOptions, Browser, Page } from "puppeteer";
 import ProductsUI from "../UI/ProductsUI";
-import IProduct from "../Models/IProduct";
-import AbstractProductPage from "../Shared/AbstractProductPage";
-import JumboProductsPage from "../ProductPage/JumboProductsPage";
+import { IProductResult, IProductData } from '../Models/IProductData';
 colors.enable();
 
 export default abstract class AbstractScraper {
@@ -29,7 +27,6 @@ export default abstract class AbstractScraper {
     await this.browser.close();
   }
 
-  protected abstract executeScrapingLogic(): Promise<IProduct[]>;
-
-  abstract scrape(): Promise<IProduct[]>;
+  protected abstract executeScrapingLogic(): Promise<IProductData[]>;
+  abstract scrape(): Promise<IProductData[]>;
 }

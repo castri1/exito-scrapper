@@ -1,8 +1,8 @@
-import IProduct from "../Models/IProduct";
 import colors from 'colors';
 import AbstractScraper from "./AbstractScraper";
 import { Browser, LaunchOptions } from "puppeteer";
 import JumboProductsUI from "../UI/JumboProductsUI";
+import { IProductData } from "../Models/IProductData";
 colors.enable();
 
 export default class JumboScraper extends AbstractScraper {
@@ -10,7 +10,7 @@ export default class JumboScraper extends AbstractScraper {
     super(url, options);
   }
 
-  protected async executeScrapingLogic(): Promise<IProduct[]> {
+  protected async executeScrapingLogic(): Promise<IProductData[]> {
     try {
       let counter = 1;
       let [previousHeight, nextHeight] = await this.ui.nextPage(500);
@@ -28,7 +28,7 @@ export default class JumboScraper extends AbstractScraper {
     }
   }
 
-  public async scrape(): Promise<IProduct[]> {
+  public async scrape(): Promise<IProductData[]> {
     await this.initialize((browser: Browser) => JumboProductsUI.navigate(browser, this.url, 2000));
     const products = await this.executeScrapingLogic();
     await this.end();

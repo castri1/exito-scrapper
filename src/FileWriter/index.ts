@@ -1,17 +1,20 @@
 import fs from 'fs';
-import IProduct from '../Models/IProduct';
+import { IProductData } from '../Models/IProductData';
 
-const writer = async (path: string, fileName: string, productData: IProduct[]): Promise<boolean> => {
+const writer = async (path: string, fileName: string, productData: IProductData[]): Promise<boolean> => {
   return new Promise(async (resolve, reject) => {
     if (!productData || productData.length == 0) {
       return reject("No data provided");
     }
-    await fs.writeFile(`${path}/${fileName}`, JSON.stringify(productData, null, 2), (err) => {
-      if (err) {
-        return reject(false);
-      }
-      return resolve(true);
+    const file = fs.createWriteStream(`${path}/${fileName}`);
+    file.on('error', err => {
+      reject(err);
     });
+    productData.forEach(prod => {
+      file.write(`${JSON.stringify(prod)}\n`)
+    });
+    file.end();
+    resolve(true);
   });  
 }
 

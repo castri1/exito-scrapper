@@ -7,7 +7,7 @@ colors.enable();
 
 // program
 //   .version('0.0.1')
-//   .option('-s --scraper <scraper>', 'Select scraper', /^(exito|jumbo|merqueo)$/i)
+//   .option('-s --scraper <scraper>', 'Select scraper', /^(exito|jumbo|merqueo|larebaja)$/i)
 //   .option('--no-headless', 'Hadless mode off')
 //   .option('-t --type <type>', 'Results file type', /^(json|txt)$/i, 'json')
 //   .option('-r --results <results>', 'Set the folder name to save the results in the current working directory', 'results')
@@ -29,24 +29,24 @@ colors.enable();
 //   process.exit();
 // }
 
-const commands: ICommands = {
-  scraper: program.scraper,
-  headless: program.headless,
-  type: program.type,
-  results: program.results,
-  input: program.input
-};
+// const commands: ICommands = {
+//   scraper: program.scraper,
+//   headless: program.headless,
+//   type: program.type,
+//   results: program.results,
+//   input: program.input
+// };
 
 const startTime = Date.now();
 const underline = '_'.repeat(30);
 console.log(underline.blue);
 
 const deguggingCommands: ICommands = {
-  scraper: 'exito',
-  headless: false,
-  type: 'json',
-  results: 'test',
-  input: 'exito.csv'
+  scraper: 'larebaja',
+  headless: true,
+  type: 'txt',
+  results: 'results2',
+  input: 'larebaja.csv'
 };
 
 (async () => {
